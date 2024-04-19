@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { GoogleContext } from "@/context/GoogleContext";
+import { Toaster } from "react-hot-toast";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryCustom } from "@/context/ReactQueryCustom";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} dark`}>
+        <ReactQueryCustom>
+          <GoogleContext>
+            <Toaster />
+            {children}
+          </GoogleContext>
+        </ReactQueryCustom>
+      </body>
     </html>
   );
 }
