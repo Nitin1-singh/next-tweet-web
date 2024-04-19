@@ -7,7 +7,7 @@ export function ReactQueryCustom({ children }: { children: ReactNode }) {
   const client = useMemo(() => new QueryClient(), [])
   return (
     <QueryClientProvider client={client}>
-      <ReactQueryDevtools />
+      {/* <ReactQueryDevtools /> */}
       {children}
     </QueryClientProvider>
   )
