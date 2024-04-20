@@ -1,8 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Next-tweet-web
+
+frontend of next-tweet. Next tweet is an clone of twitter/x
+
+## Technology used
+- Typescript
+- Next js
+- React
+- React Query
+- Graphql client
+- codegen
+
 
 ## Getting Started
 
-First, run the development server:
+First, run the app:
 
 ```bash
 npm run dev
